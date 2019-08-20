@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Document</title>
+ 
+ <script type="text/javascript">
+ function baseFunction() {
+ var btn = document.getElementById("#btn");
+ 
+ if (btn !== null) 
+ btn.addEventListener("click", showInput);
+ }
+ 
+ function showInput() {
+ var elem = document.querySelector("#firstName");
+ if (elem !== null){
+ var firstName = elem.value;
+ alert(firstName);
+ }
+ elem.style.color = "#ff0344";
+ elem.vlaue="I have changed the text";
+}
+ 
+ window.addEventListener("load", baseFunction);
+ </script>
+</head>
+<body>
+ <input type="text" id="firstName" />
+ <input type="button" id="btn" value="show alert">
+</body>
+</html>
